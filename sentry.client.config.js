@@ -27,7 +27,7 @@ Sentry.init({
       blockAllMedia: true,
     }),
     Sentry.browserTracingIntegration({
-      idleTimeout: 10000,
+      idleTimeout: 5000,
     }),
   ],
 });
