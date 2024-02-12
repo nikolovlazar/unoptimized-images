@@ -25,6 +25,6 @@ export const Photo = ({ src }) => (
         </Button>
       </div>
     </div>
-    <img src={src} />
+    <img src={src} loading="lazy" />
   </div>
 );

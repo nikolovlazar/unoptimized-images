@@ -6,6 +6,7 @@ import "./globals.css";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-sans",
 });
 
@@ -16,12 +17,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fontSans.variable}`}>
       <body
-        className={cn(
-          "h-screen overflow-x-hidden bg-background antialiased",
-          fontSans.className,
-        )}
+        className={cn("h-screen overflow-x-hidden bg-background antialiased")}
       >
         <Nav />
         {children}
