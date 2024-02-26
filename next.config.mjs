@@ -39,4 +39,3 @@ export default withSentryConfig(
     automaticVercelMonitors: true,
   },
 );
-

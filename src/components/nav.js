@@ -44,6 +44,7 @@ export const Nav = () => {
             <NavigationMenuTrigger
               className="flex gap-2 font-semibold text-md"
               hideChevron
+              elementtiming="logo"
             >
               <SiPinterest className="text-red-500 size-6" />
               Shpinterst

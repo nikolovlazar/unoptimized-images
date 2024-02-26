@@ -1,5 +1,5 @@
 import { PerfObserver } from "@/components/perf-observer";
-import { OptimizedPhoto } from "@/components/optimized-photo";
+import { SemiOptimizedPhoto } from "@/components/semi-optimized-photo";
 
 const photos = Array.from(new Array(23)).map((_, i) => i + 1);
 
@@ -9,7 +9,7 @@ export default function Home() {
       <PerfObserver type="largest-contentful-paint" />
       <PerfObserver type="element" />
       {photos.map((photo) => (
-        <OptimizedPhoto key={photo} src={photo} />
+        <SemiOptimizedPhoto key={photo} src={photo} />
       ))}
     </main>
   );
