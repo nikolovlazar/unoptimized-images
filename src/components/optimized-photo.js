@@ -27,13 +27,7 @@ export const OptimizedPhoto = ({ src }) => (
     </div>
     <picture className="[content-visibility:auto]">
       <source type="image/avif" srcSet={`/optimized/${src}.avif`} />
-      <img
-        alt="A photo"
-        src={`/optimized/${src}.webp`}
-        loading="lazy"
-        decoding="async"
-        // fetchPriority="high"
-      />
+      <img alt="A photo" src={`/optimized/${src}.webp`} loading="lazy" />
     </picture>
   </div>
 );
