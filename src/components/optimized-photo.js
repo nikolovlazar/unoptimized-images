@@ -1,7 +1,7 @@
 import { FiChevronDown, FiShare, FiMoreHorizontal } from "react-icons/fi";
 import { Button } from "./ui/button";
 
-export const OptimizedPhoto = ({ src }) => (
+export const OptimizedPhoto = ({ src, loading, decoding }) => (
   <div className="relative group rounded-lg overflow-hidden">
     <div className="hidden group-hover:flex absolute inset-0 flex-col justify-between bg-black bg-opacity-50 p-6">
       <div className="flex justify-between">
@@ -27,7 +27,12 @@ export const OptimizedPhoto = ({ src }) => (
     </div>
     <picture className="[content-visibility:auto]">
       <source type="image/avif" srcSet={`/optimized/${src}.avif`} />
-      <img alt="A photo" src={`/optimized/${src}.webp`} loading="lazy" />
+      <img
+        alt="A photo"
+        src={`/optimized/${src}.webp`}
+        loading={loading}
+        decoding={decoding}
+      />
     </picture>
   </div>
 );
